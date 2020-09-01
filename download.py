@@ -8,11 +8,11 @@ from lxml.html import fromstring
 
 
 # 解密ts视频流
+IV = b'0000000000000000'
 def aes_decrypt(bytes_,key_array):
     key = bytes(key_array)
-    iv = b'0000000000000000'
     mode = AES.MODE_CBC
-    cryptos = AES.new(key, mode, iv)
+    cryptos = AES.new(key, mode, IV)
     decrypt_bytes = cryptos.decrypt(bytes_)
     return decrypt_bytes
 
