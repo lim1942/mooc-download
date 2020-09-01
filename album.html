@@ -1,0 +1,1412 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Python3数据分析与挖掘建模实战_课程</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta property="qc:admins" content="77103107776157736375" />
+    <meta property="wb:webmaster" content="c4f857219bfae3cb" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <meta http-equiv="Cache-Control" content="no-transform " />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="keywords" content="慕课网，实战课程，慕课实战，MOOC实战，移动实战，php实战，web前端实战，html5实战课程，java实战，python实战" />
+    <meta name="description" content="轻松转行，快速胜任数据分析师岗位，逆袭成为数据掘金时代的抢手人才！" />
+
+    <link rel="stylesheet" href="//www.imooc.com/static/moco/v1.0/dist/css/moco.min.css?v=202008261040" type="text/css" />
+
+    <style type="text/css">
+    .moco-modal-info {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    </style>
+
+
+<script>
+    var cid = '185';
+</script>
+
+
+
+
+    <script src="/static/lib/zhugeio/init.js?v=202008261040"></script>
+    <script type="text/javascript">
+        var OP_CONFIG={"module":"learn","page":"list","userout":0,"usercaution":"","userInfo":{"uid":2736619}};
+        OP_CONFIG.isLogin = 1;
+        var isLogin = 1;
+        var _msg_unread = 0;
+        var _not_unread = 0;
+        var _cartFlag = 0;
+        var seajsTimestamp="v=202008261040";
+            </script>
+
+
+        <script type="text/javascript">
+
+    eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('!4(){3 b={};3 d=0;3 5=[{c:\'//k.p.h/k/m/K/L.q\',6:0},{c:\'//m.p.h/I/J-O.q\',6:0}];3 u=4(){3 j,n=e P("(^| )"+"l=([^;]*)(;|$)");9(j=r.s.M(n)){o N(j[2])}D{o C}};3 A=4(t){3 B=u();3 8=e H();8.G(8.F()+E*v*v*10);r.s="l="+t+";13="+8.14()+";15=/;T=U.h";9(t&&t!=B){R.Y.Z()}};3 x=4(i){3 7=e X();7.V=4(){W(b[i]);b[i]=C;a(i,0)};7.Q=4(){a(i,1)};b[i]=S(4(){7.z="";a(i,1)},11);7.z=5[i].c+"?t="+12.16()};3 a=4(y,6){d++;5[y].6=6;9(d==5.f){3 g=0;w(3 i=0;i<5.f;i++){9(5[i].6==1){g=1}}A(g)}};w(3 i=0;i<5.f;i++){x(i)}}()',62,69,'|||var|function|urls|flag|imgobj|exp|if|callback|timer|url|count|new|length|error|com||arr|static|IMCDNS|img|reg|return|mukewang|png|document|cookie||getcookie|60|for|checkCdn|index|src|setcookie|_0|null|else|24|getTime|setTime|Date|images|unknow|common|logo|match|unescape|80|RegExp|onerror|window|setTimeout|domain|imooc|onload|clearTimeout|Image|location|reload|1000|3000|Math|expires|toGMTString|path|random'.split('|'),0,{}))
+
+    </script>
+    <link rel="stylesheet" href="//coding.imooc.com/static/module/??common/css/common-less.css,learn/common/css/common-less.css,learn/list/css/index-less.css?v=1592820432" type="text/css" />
+</head>
+<body  class="">
+
+<!--顶部广告位-->
+<div id="globalTopBanner"></div>
+
+<div id="new_header">
+    <div class="page-container new-header" id="nav">
+        <ul class="nav-item">
+            <li><a href="//www.imooc.com" target="_self" class="imooc">慕课网首页</a></li>
+            <li><a href="//www.imooc.com/course/list" target="_self">免费课程</a></li>
+            <li><a href="/" class="active" target="_self">实战课程</a></li>
+            <li><a href="//class.imooc.com" target="_self">金职位<i class="icn-new"></i></a></li>
+            <li><a href="//www.imooc.com/wiki" target="_self">慕课教程</a></li>
+            <li><a href="//www.imooc.com/read" target="_self">专栏</a></li>
+            <li><a href="//www.imooc.com/article" target="_self">手记</a></li>
+            <!-- <li><a href="//job.imooc.com" target="_self">猿聘<i class="icn-new"></i></a></li> -->
+        </ul>
+        <div class="header-right clearfix">
+            <div class="app-download" id="js-app-load">
+                <a href="//www.imooc.com/mobile/app" target="_blank">下载APP</a>
+                <div class="app-load-box clearfix js-load-box">
+                    <div class="mobile-load-box">
+                        <h4>慕课网APP - 随时随地学编程</h4>
+                        <img src="//www.imooc.com/static/img/common/appload.png" class="l">
+                        <div class="r">
+                            <a class="app-load-btn" href="https://itunes.apple.com/cn/app/mu-ke-wang/id722179140?mt=8" target="_blank"><i class="icon-apple"></i>App Store下载</a>
+                            <a class="app-load-btn" href="//www.imooc.com/mobile/appdown" target="_blank"><i class="icon-android"></i>Android下载</a>
+                            <p>扫描下载慕课网APP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-box">
+                <a href="javascript:void(0);" id="common-nav-search">
+                    <i class="imv2-search2"></i>
+                </a>
+                <div class="input-search hide" id="common-input-search">
+                    <div class="input-box">
+                        <input type="text" class="nav-search-input" autocomplete="off">
+                        <a href="javascript:void(0);" class="nav-searchBtn js-nav-searchBtn">
+                            <i class="imv2-search2"></i>
+                        </a>
+                    </div>
+                    <div class="nav-search-box hide">
+                        <div class="hot">
+                            <h2>热搜</h2>
+                            <div class="hot-box">
+                            </div>
+                        </div>
+                        <div class="history hide">
+                            <h2>最近搜索<a href="javascript:void(0);" class="history-clear js-clear-history">清空</a></h2>
+                            <div class="history-box">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-correlate-box hide">
+                        <div class="correlate">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shop-cart" id="shop-cart">
+                <a href="//order.imooc.com/pay/cart" class="shop-cart-icon" target="_blank">
+                <span class="imv2-shopping-cart2 js-endcart"></span><span class="shopping_icon js-cart-num" data-ordernum="0"  data-cartnum="0" data-prevnum="0" style='display: none'>0</span>
+                </a>
+                <div class="my-cart" id="js-my-cart"></div>
+            </div>
+                        <div id="login-area">
+                <ul class="clearfix logined">
+                    <li class='remind_warp'>
+                        <i class="msg_remind"></i>
+                        <a target="_blank" href='//www.imooc.com/u/2736619/notices'>
+                            <i class='imv2-bell1'></i>
+                        </a>
+                    </li>
+                    <li class="user-mycourse-box">
+                        <a class="user-card-item js-header-courseurl" href="" target="_self">
+                            <span>我的课程</span>
+                        </a>
+                    </li>
+                    <li class="user-card-box" id='header-user-card'>
+                        <a id="header-avator" class="user-card-item js-header-avator" action-type="my_menu"  href="" target="_self">
+                            <img width="40" height="40">
+                            <i class="myspace_remind" style="display: none;"></i>
+                            <span style="display: none;">动态提醒</span>
+                        </a>
+                        <div class="g-user-card"></div>
+                    </li>
+                </ul>
+            </div>
+                    </div>
+    </div>
+</div>
+
+
+
+<div id="sz-banner" class="shizhan-banner" >
+    <div class="info-bg" id="js-info-bg">
+        <div class="cover-img-wrap">
+        <img data-src="//img.mukewang.com/szimg/5a81501b000135f405400300.jpg" alt="" style="display: none" id="js-cover-img">
+        </div>
+        <div class="cover-mask"></div>
+    </div>
+    <div class='wrap clearfix'>
+        <div class='sz-banner-left'>
+            <div class="crumbs clearfix">
+                <a href="/">实战</a>
+                <i>\</i>
+                <span>Python3数据分析与挖掘建模实战</span>
+            </div>
+
+            <h2 class='course-title'>
+                <a href='/class/185.html'>Python3数据分析与挖掘建模实战</a>
+            </h2>
+
+            <div class='shizhan-nav clearfix'>
+                <a href='/learn/list/185.html' class="clearfix on">
+                    <i class='sz-course'></i>
+                    <span>课程</span>
+                </a>
+
+                <a href='/down/185.html' >
+                <i class='imv2-cloud_download'></i>
+                <span>下载</span>
+                </a>
+
+                <a href='/learn/qa/185.html' >
+                <i class='sz-evaluation'></i>
+                <span>问答</span>
+                </a>
+
+                <a href='/classmate/classlist/185.html' >
+                <i class='sz-student'></i>
+                <span>同学</span>
+                </a>
+            </div>
+        </div>
+                <div class='sz-banner-right'>
+                        <div class='course-notice js-notice-bar js-notice-trigger'>
+                <div class='clearfix'>
+                    <i class='imv2-vol_up'></i>
+                    <span>公告</span>
+                </div>
+                <div class='course-new-notice'>
+                                                            <p class='noticeindex'>赠送：电子书籍+随堂代码</p>
+                    <input type='hidden' class='jsnloadtime' value='1519696700' />
+                    <div class='clearfix'>
+                        <a href='javascript:;' class='al js-notice-read'>知道了</a>
+                        <a href='javascript:;' class='ar clearfix js-notice-read js-notice-trigger'>
+                            <span>详情</span>
+                            <i class='imv2-arrow3_r'></i>
+                        </a>
+                    </div>
+                                                        </div>
+            </div>
+                    </div>
+            </div>
+</div><!-- sz-banner end --><div class='learn-container clearfix'>
+
+    <div class='learn-container-left'>
+
+<div class='learn-container-nav clearfix'>
+    <a href='javascript:;' class='active'>章节</a>
+    <a href='/learn/note/185.html'>笔记</a>
+        <a href='/learn/log/185.html'>更新日志</a>
+        </div>
+
+<div class='learn-course-list'>
+
+        <div class='list-item'>
+        <h3>
+            第1章 课程介绍【赠送相关电子书+随堂代码】
+                                                </h3>
+                <ul>
+                        <li class='finished'>
+                                <i class='imv2-article ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=20478">
+                    <span class="title_info">1-1 课前必读（不看会错过一个亿） </span>                                                                             </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11265">
+                    <span class="title_info">1-2 课程导学 </span> (07:36)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11266">
+                    <span class="title_info">1-3 数据分析概述 </span> (11:25)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                    </ul>
+            </div>
+        <div class='list-item'>
+        <h3>
+            第2章 数据获取
+                                                </h3>
+                <ul>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11267">
+                    <span class="title_info">2-1 数据仓库 </span> (05:06)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11268">
+                    <span class="title_info">2-2 监测与抓取 </span> (02:53)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11269">
+                    <span class="title_info">2-3 填写、埋点、日志、计算 </span> (02:25)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11270">
+                    <span class="title_info">2-4 数据学习网站 </span> (07:01)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                    </ul>
+            </div>
+        <div class='list-item'>
+        <h3>
+            第3章 单因子探索分析与数据可视化
+                                                </h3>
+                <ul>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11449">
+                    <span class="title_info">3-1 数据案例介绍 </span> (04:27)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11274">
+                    <span class="title_info">3-2 集中趋势,离中趋势 </span> (05:58)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11275">
+                    <span class="title_info">3-3 数据分布--偏态与峰度 </span> (03:54)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=13041">
+                    <span class="title_info">3-4 抽样理论 </span> (06:06)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11277">
+                    <span class="title_info">3-5 编码实现（基于python2.7） </span> (12:51)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11278">
+                    <span class="title_info">3-6 数据分类 </span> (02:37)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11279">
+                    <span class="title_info">3-7 异常值分析 </span> (03:33)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11280">
+                    <span class="title_info">3-8 对比分析 </span> (05:38)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11281">
+                    <span class="title_info">3-9 结构分析 </span> (01:39)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11282">
+                    <span class="title_info">3-10 分布分析 </span> (05:59)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11284">
+                    <span class="title_info">3-11 Satisfaction Level的分析 </span> (09:32)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11285">
+                    <span class="title_info">3-12 LastEvaluation的分析 </span> (07:39)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11286">
+                    <span class="title_info">3-13 NumberProject的分析 </span> (03:42)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11287">
+                    <span class="title_info">3-14 AverageMonthlyHours的分析 </span> (05:40)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11288">
+                    <span class="title_info">3-15 TimeSpendCompany的分析 </span> (00:51)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11289">
+                    <span class="title_info">3-16 WorkAccident的分析 </span> (00:49)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11290">
+                    <span class="title_info">3-17 Left的分析 </span> (00:23)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11291">
+                    <span class="title_info">3-18 PromotionLast5Years的分析 </span> (00:30)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11292">
+                    <span class="title_info">3-19 Salary的分析 </span> (01:37)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class=''>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11293">
+                    <span class="title_info">3-20 Department的分析 </span> (01:16)                                                                            </a>
+
+
+                                <i class="sz-empty iright pink"></i>
+                            </li>
+                        <li class=''>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11294">
+                    <span class="title_info">3-21 简单对比分析操作 </span> (07:08)                                                                            </a>
+
+
+                                <i class="sz-empty iright pink"></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11295">
+                    <span class="title_info">3-22 可视化-柱状图 </span> (15:42)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11296">
+                    <span class="title_info">3-23 可视化-直方图 </span> (04:27)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11297">
+                    <span class="title_info">3-24 可视化-箱线图 </span> (02:21)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11298">
+                    <span class="title_info">3-25 可视化-折线图 </span> (02:21)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11299">
+                    <span class="title_info">3-26 可视化-饼图 </span> (03:09)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11300">
+                    <span class="title_info">3-27 本章小结 </span> (03:38)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                    </ul>
+            </div>
+        <div class='list-item'>
+        <h3>
+            第4章 多因子探索分析
+                                                </h3>
+                <ul>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11301">
+                    <span class="title_info">4-1 假设检验 </span> (08:05)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class=''>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11302">
+                    <span class="title_info">4-2 卡方检验 </span> (02:21)                                                                            </a>
+
+
+                                <i class="sz-empty iright pink"></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11303">
+                    <span class="title_info">4-3 方差检验 </span> (03:43)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11304">
+                    <span class="title_info">4-4 相关系数 </span> (03:33)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11305">
+                    <span class="title_info">4-5 线性回归 </span> (02:48)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11306">
+                    <span class="title_info">4-6 主成分分析 </span> (05:20)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class=''>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11307">
+                    <span class="title_info">4-7 编码实现 </span> (19:21)                                                                            </a>
+
+
+                                <i class="sz-empty iright pink"></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11309">
+                    <span class="title_info">4-8 交叉分析方法与实现 </span> (13:48)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11310">
+                    <span class="title_info">4-9 分组分析方法与实现 </span> (08:45)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11311">
+                    <span class="title_info">4-10 相关分析与实现 </span> (22:42)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11312">
+                    <span class="title_info">4-11 因子分析与实现 </span> (06:42)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11313">
+                    <span class="title_info">4-12 本章小结 </span> (02:02)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                    </ul>
+            </div>
+        <div class='list-item'>
+        <h3>
+            第5章 预处理理论
+                                                </h3>
+                <ul>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11317">
+                    <span class="title_info">5-1 特征工程概述 </span> (09:59)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11318">
+                    <span class="title_info">5-2 数据样本采集 </span> (02:42)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11319">
+                    <span class="title_info">5-3 异常值处理 </span> (12:45)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11320">
+                    <span class="title_info">5-4 标注 </span> (02:58)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11321">
+                    <span class="title_info">5-5 特征选择 </span> (17:18)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11322">
+                    <span class="title_info">5-6 特征变换-对指化 </span> (04:23)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11323">
+                    <span class="title_info">5-7 特征变换-离散化 </span> (07:13)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11324">
+                    <span class="title_info">5-8 特征变换-归一化与标准化 </span> (07:06)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11325">
+                    <span class="title_info">5-9 特征变换-数值化 </span> (10:09)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11326">
+                    <span class="title_info">5-10 特征变换-正规化 </span> (04:49)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class=''>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11328">
+                    <span class="title_info">5-11 特征降维-LDA </span> (11:32)                                                                            </a>
+
+
+                                <i class="sz-empty iright pink"></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11329">
+                    <span class="title_info">5-12 特征衍生 </span> (03:04)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11330">
+                    <span class="title_info">5-13 HR表的特征预处理-1 </span> (15:29)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11332">
+                    <span class="title_info">5-14 HR表的特征预处理-2 </span> (08:35)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11333">
+                    <span class="title_info">5-15 本章小结 </span> (02:53)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                    </ul>
+            </div>
+        <div class='list-item'>
+        <h3>
+            第6章 挖掘建模
+                                                </h3>
+                <ul>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11336">
+                    <span class="title_info">6-1 机器学习与数据建模 </span> (05:17)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11337">
+                    <span class="title_info">6-2 训练集、验证集、测试集 </span> (07:02)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11338">
+                    <span class="title_info">6-3 分类-KNN </span> (21:43)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11339">
+                    <span class="title_info">6-4 分类-朴素贝叶斯 </span> (19:57)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11340">
+                    <span class="title_info">6-5 分类-决策树 </span> (23:42)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class=''>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11341">
+                    <span class="title_info">6-6 分类-支持向量机 </span> (20:41)                                                                            </a>
+
+
+                                <i class="sz-empty iright pink"></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11342">
+                    <span class="title_info">6-7 分类-集成-随机森林 </span> (19:24)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11343">
+                    <span class="title_info">6-8 分类-集成-Adaboost </span> (10:47)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11344">
+                    <span class="title_info">6-9 回归-线性回归 </span> (23:36)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11345">
+                    <span class="title_info">6-10 回归-分类-逻辑回归 </span> (11:12)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11346">
+                    <span class="title_info">6-11 回归-分类-人工神经网络-1 </span> (16:26)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11350">
+                    <span class="title_info">6-12 回归-分类-人工神经网络-2 </span> (15:47)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11352">
+                    <span class="title_info">6-13 回归-回归树与提升树 </span> (09:59)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11354">
+                    <span class="title_info">6-14 聚类-Kmeans-1 </span> (10:37)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11356">
+                    <span class="title_info">6-15 聚类-Kmeans-2 </span> (10:54)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11357">
+                    <span class="title_info">6-16 聚类-DBSCAN </span> (10:33)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11358">
+                    <span class="title_info">6-17 聚类-层次聚类 </span> (04:40)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11359">
+                    <span class="title_info">6-18 聚类-图分裂 </span> (03:54)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11360">
+                    <span class="title_info">6-19 关联-关联规则-1 </span> (13:56)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11361">
+                    <span class="title_info">6-20 关联-关联规则-2 </span> (13:39)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11362">
+                    <span class="title_info">6-21 半监督-标签传播算法 </span> (17:18)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11363">
+                    <span class="title_info">6-22 本章小结 </span> (05:50)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                    </ul>
+            </div>
+        <div class='list-item'>
+        <h3>
+            第7章 模型评估
+                                                </h3>
+                <ul>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11347">
+                    <span class="title_info">7-1 分类评估-混淆矩阵 </span> (14:51)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11351">
+                    <span class="title_info">7-2 分类评估-ROC、AUC、提升图与KS图 </span> (15:12)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11353">
+                    <span class="title_info">7-3 回归评估 </span> (05:02)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class=''>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11355">
+                    <span class="title_info">7-4 非监督评估 </span> (07:49)                                                                            </a>
+
+
+                                <i class="sz-empty iright pink"></i>
+                            </li>
+                    </ul>
+            </div>
+        <div class='list-item'>
+        <h3>
+            第8章 总结与展望
+                                                </h3>
+                <ul>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11348">
+                    <span class="title_info">8-1 课程回顾与多角度看数据分析 </span> (05:22)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                        <li class='finished'>
+                                <i class='imv2-video ileft'></i>
+                                <a target="_blank" href="/lesson/185.html#mid=11349">
+                    <span class="title_info">8-2 大数据与学习这门课后还能干什么？.mp4 </span> (07:12)                                                                            </a>
+
+
+                                <i class='sz-full iright pink'></i>
+                            </li>
+                    </ul>
+            </div>
+
+    		<div class="chapter-update-state clearfix">
+            <i class='imv2-check'></i>
+            <span>本课程已完结</span>
+        </div>
+	</div>
+
+<div class='learning_progress learning_progress_static'>
+    <a href='https://www.imooc.com/u/2736619' class='learning_progress_head  js-header-avator'>
+        <img src="" width="36" height="36">
+    </a>
+
+    <dl>
+        <dt>学习进度</dt>
+        <dd>92%<label></label></dd>
+    </dl>
+
+    <dl>
+        <dt>获得经验</dt>
+        <dd>825</dd>
+    </dl>
+
+    <dl>
+        <dt>学习用时</dt>
+        <dd>194小时48分钟</dd>
+    </dl>
+
+    <a href='/lesson/185.html#mid=11449' class='continue_learn'>
+        继续学习
+    </a>
+    <span>上次学至：3-1 数据案例介绍</span>
+</div>
+
+<div class='learning_progress learning_progress_fixed'>
+    <a href='https://www.imooc.com/u/2736619' class='learning_progress_head  js-header-avator'>
+        <img src="" width="36" height="36">
+    </a>
+
+    <dl>
+        <dt>学习进度</dt>
+        <dd>92%<label></label></dd>
+    </dl>
+
+    <dl>
+        <dt>获得经验</dt>
+        <dd>825</dd>
+    </dl>
+
+    <dl>
+        <dt>学习用时</dt>
+        <dd>194小时48分钟</dd>
+    </dl>
+
+    <a href='/lesson/185.html#mid=11449' class='continue_learn'>
+        继续学习
+    </a>
+    <span>上次学至：3-1 数据案例介绍</span>
+</div>
+
+<div class='learning_zw_fixed'></div>
+
+<div class='learn_tip learn_tip_step3'>
+    <div class=''>
+        <div class='learn_tip_tit clearfix'>
+            <i class='sz-tips'></i>
+            <span class='span1'>搬家提示</span>
+            <span class='span2'>3/3</span>
+        </div>
+        <div class='learn_tip_content'>
+            进度、经验，以及最常用的继续学习按钮，我们搬到了这里！
+        </div>
+        <div class='learn_tip_footer'>
+            <a href='javascript:;' data-next='end' class='next_tip js_no_tip'>完成</a>
+        </div>
+        <span class='triangle-down'></span>
+    </div>
+</div>
+
+    </div>
+
+    <div class='learn-course-right'>
+        <div class='course-sidebar-title'>
+    <h3 class="clearfix">
+        <span class="span">课程摘要</span>
+
+        <a class='clearfix' target='_blank' href='//coding.imooc.com/class/185.html'>
+            <span>介绍详情</span>
+            <i>></i>
+        </a>
+     </h3>
+</div>
+
+<div class='course-sidebar evaluate'>
+    <h2>综合评分</h2>
+    <h3>9.91</h3>
+
+            <a href='/evaluation/185.html#Evaluation' target="_blank" class='href_btn look'>查看评价</a>
+
+    <p>给老师来点鼓励，可获得10积分奖励，前10评价100%可获实战专享优惠券！<a href='javascript:;' class='js-trgger-strategy'>优惠券攻略</a></p>
+
+    <div class='course-score-info clearfix'>
+        <dl>
+            <dt>难度</dt>
+            <dd>中级</dd>
+        </dl>
+
+        <dl>
+            <dt>时长</dt>
+            <dd>12小时12分钟</dd>
+        </dl>
+
+        <dl>
+            <dt>人数</dt>
+            <dd>1658</dd>
+        </dl>
+    </div>
+
+    <div class='strategy'>
+        <div class='relative'>
+            第1-2评价，用户可获得10元优惠券<br>
+            第3-5评价，用户可获得5元优惠券<br>
+            第6-10评价，用户可获得3元优惠券<br>
+            10名以后，用户可获得10积分奖励
+            <div class='sanjiao'></div>
+        </div>
+    </div>
+</div>
+
+<div class='course-sidebar porject'>
+
+
+
+            <div class="item">
+            <div class="title">QQ技术讨论群</div>
+            <a href='javascript:;' class='href_btn js-addQQqun' data-qun="973024571" data-url="https://jq.qq.com/?_wv=1027&k=5onhKWD" data-ma="5df6ec1509bfedc201610162" data-verify="1905231342009678">点击加群</a>
+            <div class='project_href'>
+                <a href='javascript:;'>QQ群：973024571</a>
+            </div>
+
+                            <p>加群验证信息：1905231342009678</p>
+                        <p>若遇到搜索不到QQ群或加群失败，请联系客服邮箱:kf@imooc.com</p>
+        </div>
+
+    <div class="item">
+        <a href='/down/185.html' target="_blank" class='href_btn'>资料下载</a>
+        <p>源代码及教辅材料下载</p>
+    </div>
+</div>
+
+
+
+
+<div class='lecturer-instr'>
+
+
+    <a class='lecturer-head' href='//www.imooc.com/t/4464425' target='_blank'>
+        <img src='//img.mukewang.com/user/5835154f0001afde06400640-100-100.jpg' />
+    </a>
+
+    <div class='lecturer-name'>
+        <a class='clearfix' href='//www.imooc.com/t/4464425' target='_blank'>
+            <span>途索</span>
+            <i class='id_icon_lecturer'></i>
+        </a>
+    </div>
+
+    <div class='lecturer-title'></div>
+    <p>Python工程师 数据工程师一枚，曾从事多项Web开发工作和数据挖掘项目，同时也是一枚热爱技术的货，爱好嵌入式，爱好AI。</p>
+        </div>
+
+<div class='lecturer-sz-recommend js-lecturer-sz-recommend'>
+    <h3 class='clearfix'>
+        <span class='span'>讲师课程推荐</span>
+                                        <a class='clearfix' target='_blank' href='//www.imooc.com/t/4464425'>
+            <span>更多</span>
+            <i>></i>
+        </a>
+                    </h3>
+
+    <ul class='moco-aside-course' id='lecturerCourse'>
+
+    </ul>
+</div>
+
+<div class="get-recom-coupon-box-blackout js-get-recom-coupon-box-blackout"></div>
+<div class="get-recom-coupon-box js-get-recom-coupon-box"></div>
+    </div>
+
+
+<div class='learn_tip learn_tip_step1'>
+    <div class=''>
+        <div class='learn_tip_tit clearfix'>
+            <i class='sz-tips'></i>
+            <span class='span1'>搬家提示</span>
+            <span class='span2'>1/3</span>
+        </div>
+        <div class='learn_tip_content'>
+            当有新公告时，会在这里提醒您～
+        </div>
+        <div class='learn_tip_footer'>
+            <a href='javascript:;' class='no_tip js_no_tip'>不用提醒</a>
+            <a href='javascript:;' data-next='1' class='next_tip'>下一步</a>
+        </div>
+        <span class='triangle-right'></span>
+    </div>
+</div>
+
+<div class='learn_tip learn_tip_step2'>
+    <div class=''>
+        <div class='learn_tip_tit clearfix'>
+            <i class='sz-tips'></i>
+            <span class='span1'>搬家提示</span>
+            <span class='span2'>2/3</span>
+        </div>
+        <div class='learn_tip_content'>
+            评价、源代码查看/下载，QQ群，课程及老师信息，全部汇集于右侧供您查看
+        </div>
+        <div class='learn_tip_footer'>
+            <a href='javascript:;' class='no_tip js_no_tip'>不用提醒</a>
+            <a href='javascript:;' data-next='2' class='next_tip'>下一步</a>
+        </div>
+        <span class='triangle-right'></span>
+    </div>
+</div>
+
+</div>
+
+
+
+<div id="footer">
+<div class="waper">
+    <div class="footerwaper clearfix">
+        <div class="followus r">
+            <a class="followus-weixin" href="javascript:;"  target="_blank" title="微信">
+                <div class="flw-weixin-box"></div>
+            </a>
+            <a class="followus-weibo" href="http://weibo.com/u/3306361973"  target="_blank" title="新浪微博"></a>
+            <a class="followus-qzone" href="http://user.qzone.qq.com/1059809142/" target="_blank" title="QQ空间"></a>
+        </div>
+        <div class="footer_intro l">
+            <div class="footer_link">
+                <ul>
+                    <li><a href="//www.imooc.com/" target="_blank">网站首页</a></li>
+                    <!-- <li><a href="//www.imooc.com/index/companytrain" target="_blank" title="企业合作">企业合作</a></li> -->
+                    <li><a href="//b.imooc.com" target="_blank" title="企业服务">企业服务</a></li>
+                    <li><a href="//www.imooc.com/about/job" target="_blank">人才招聘</a></li>
+                    <li> <a href="//www.imooc.com/about/contact" target="_blank">联系我们</a></li>
+                    <li> <a href="//www.imooc.com/about/recruit" target="_blank">讲师招募</a></li>
+                     <li> <a href="//www.imooc.com/help/cate/19" target="_blank">帮助中心</a></li>
+                    <li> <a href="//www.imooc.com/user/feedback?coding" target="_blank">意见反馈</a></li>
+                    <li><a href="http://daxue.imooc.com/" target="_blank">慕课大学</a></li>
+                    <li><a href="//git.imooc.com" target="_blank">代码托管</a></li>
+                    <li> <a href="//www.imooc.com/about/friendly" target="_blank">友情链接</a></li>
+                    <!-- <li><a href="http://www.imooc.com/about/us" target="_blank">关于我们</a></li> -->
+                </ul>
+            </div>
+            <p>Copyright © 2020 imooc.com All Rights Reserved | 京ICP备 12003892号-11 <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802030151" style="margin:0 5px;color: #787D82;" target="_blank"><i class="beian"></i>京公网安备11010802030151号</a></p>
+        </div>
+    </div>
+</div>
+</div>
+<!-- 新人有礼入口-->
+
+
+
+
+
+<div id="J_GotoTop" class="elevator">
+    <a href="//www.imooc.com/user/feedback?coding" class="elevator-msg"  target="_blank" >
+        <i class="sz-feedback"></i>
+        <span class="">意见反馈</span>
+    </a>
+    <a href="//order.imooc.com/pay/sharegoods"  class="elevator-dist" style="display:none;" target="_blank">
+        <i class=""></i>
+        <span class="">分销返利</span>
+    </a>
+    <!-- <a href="//www.imooc.com/act/invite"  class="elevator-dist"  target="_blank">
+        <i class=""></i>
+        <span class="">邀请有奖</span>
+    </a> -->
+    <a href="//www.imooc.com/help/cate/19" class="elevator-faq"  target="_blank" >
+        <i class="sz-help_outline"></i>
+        <span class="">帮助中心</span>
+    </a>
+    <a href="//www.imooc.com/mobile/app" target="_blank" class="elevator-app" >
+        <i class="sz-appdownload"></i>
+        <span class="">APP下载</span>
+        <div class="elevator-app-box"></div>
+    </a>
+    <a href="javascript:void(0)" class="elevator-weixin no-goto" id="js-elevator-weixin" >
+        <i class="sz-weixigzh"></i>
+        <span class="">官方微信</span>
+        <div class="elevator-weixin-box"></div>
+    </a>
+    <a href="javascript:void(0)" class="elevator-top no-goto" style="display:none" id="backTop">
+        <i class="sz-arrow-up"></i>
+        <span class="">返回顶部</span>
+    </a>
+</div>
+
+<!-- 右侧浮动广告位 -->
+<div id="globalRightFloat"></div>
+
+
+
+<script type="text/javascript" src="//moco.imooc.com/static/monitor/error.js"></script>
+<script src="/passport/static/scripts/ssologin.js?v=2.0"></script>
+<script type="text/javascript" src="/static/module/common/js/common.js?v=202008261040"></script>
+<script type="text/javascript" src="//www.imooc.com/static/moco/v1.0/dist/js/moco.min.js?v=202008261040"></script>
+
+
+
+        <div class="modal notice-modal">
+        <div class="hd">
+            <span>课程公告</span>
+            <a href="javascript:;" class="close" rel="modal:close">
+                <i class="sz-close"></i>
+            </a>
+        </div>
+        <div class="bd">
+            <div class="notice-container">
+                <ul class="notice-list">
+                                    <li>
+                        <div class="top">
+                            <h3>赠送：电子书籍+随堂代码</h3>
+                            <div class="metas">
+                                <span class="meta-time">2018-02-27</span>
+                            </div>
+                        </div>
+                        <p>课程提供相关电子书籍+随堂代码，可以到课程资料下载区进行下载!</p>
+                    </li>
+                                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/imooc-tpl" id="teacher-course-tpl">
+        {@each data as value, i}
+        <li>
+            <div class="aside-course-img">
+              <img src="${value.pic}">
+              {@if value.price && value.price > 0}<p class="aside-course-type">实战</p>{@/if}
+            </div>
+            <div class="aside-course-content">
+              <a target="_blank" href="{@if value.price && value.price > 0}/class/${value.id}.html{@else}//www.imooc.com/learn/${value.id}{@/if}" class="aside-course-name">
+                ${value.name}
+              </a>
+              {@if value.price && value.price > 0}
+              <p class="aside-course-price">
+                    {@if value.discount_price && value.discount_price > 0}
+                    <span class='aside-discount-price'>￥${value.discount_price}</span>
+                    {@if value.discount_type == 2}
+                    <span class='aside-discount-intro'>学生惠</span>
+                    {@else}
+                    <span class='aside-discount-intro'>${value.discount_name}</span>
+                    {@/if}
+                    {@else}
+                    ￥${value.price}
+                    {@/if}
+              </p>
+              <div class="aside-course-dot">
+                <i class="imv2-dot_samll"></i>
+              </div>
+              {@/if}
+              <p class="aside-course-grade">{@if value.easy_type == 1}
+                    入门
+                    {@else if value.easy_type == 2}
+                    初级
+                    {@else if value.easy_type == 3}
+                    中级
+                    {@else if value.easy_type == 4}
+                    高级
+                    {@else if value.easy_type == 5}
+                    专业
+                    {@/if}</p>
+              <div class="aside-course-dot">
+                <i class="imv2-dot_samll"></i>
+              </div>
+              <p class="aside-course-people">
+                <i class="imv2-set-sns"></i>
+                <span>${value.numbers}</span>
+              </p>
+            </div>
+        </li>
+        {@/each}
+    </script>
+
+
+
+<script>/*RESOURCE_MAP*/</script>
+<script data-entry="learn/list/index">requirejs(['learn/list/index']);</script>
+
+<div style="display: none">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?c1c5f01e0fc4d75fd5cbb16f2e713d56";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</div>
+
+</body>
+</html>

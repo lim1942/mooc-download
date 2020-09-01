@@ -1,0 +1,6 @@
+lxml==4.5.0
+requests==2.23.0
+PyExecJS==1.5.1
+ffmpeg_python==0.2.0
+pycrypto==2.6.1
+ffmpeg==1.4

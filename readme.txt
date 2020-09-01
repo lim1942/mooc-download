@@ -1,0 +1,9 @@
+macOS+python36
+慕课网付费课程下载
+1.浏览器登录后，把付费课程html页面保存到album.html
+2.把观看视频时的抓包的请求cookie以字典形式保存到cookie.txt
+3.运行download.py 的main 方法即可下载该专辑
+
+慕课网播放信息等文本用decrypt.js解密
+视频用了aes加密，aes解密的iv是0000000000000000，key的获取地址在改视频m3u8文件中，获取key后再用decrypt.js解密就能得到key，
+key解析ts，再用ffmpeg合并ts就能得到正常播放视频
