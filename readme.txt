@@ -1,5 +1,5 @@
 macOS+python36
-慕课网付费课程下载
+慕课网付费课程下载，为了请求安全，单线程下载
 1.浏览器登录后，把付费课程html页面保存到album.html
 2.把观看视频时的抓包的请求cookie以字典形式保存到cookie.txt
 3.运行download.py 的main 方法即可下载该专辑

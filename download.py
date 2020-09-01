@@ -26,6 +26,7 @@ def destm_decrypt(content,mode=None):
 
 
 # 单个ts下载切换cdn
+# 通过抓包测试获取的cnd域名
 CDN = ["v3.mukewang.com","video3.sycdn.imooc.com","video1.sycdn.imooc.com"]
 def ts_download(url):
     # cdn域名排序
@@ -101,7 +102,7 @@ def main(html=None):
         os.makedirs(mp4_dir_name)
     for index, li in enumerate(lis):
         # 跳过不是视频的课程
-        if index in [0]:
+        if index in []:
             continue
         cid,mid = re.search("/lesson/(\d+).html#mid=(\d+)",li.xpath("./a/@href")[0]).groups()
         name = li.xpath("./a/span/text()")[0].replace('.mp4','').strip().replace(' ','.') +'_'+ li.xpath("./a/text()")[1].strip()
@@ -111,6 +112,7 @@ def main(html=None):
         output_filename = os.path.join(mp4_dir_name, f"{name}.mp4")
         if not os.path.exists(output_filename):
             lesson_url = f"https://coding.imooc.com/lesson/m3u8h5?mid={mid}&cid={cid}&ssl=1&cdn=aliyun1"
+            print(lesson_url)
             play_url = get_play_url(lesson_url)
             moc_m3u8_download(play_url,ts_dir_name,output_filename,f"episode:{index+1}/{len(lis)}")
         else:
