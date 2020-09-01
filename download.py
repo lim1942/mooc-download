@@ -96,7 +96,7 @@ def main(html=None):
             html = f.read()
     xml = fromstring(html)
     lis = xml.xpath(".//div[@class='list-item']//li")
-    album_name = xml.xpath(".//title/text()")[0]
+    album_name = xml.xpath(".//title/text()")[0].replace('(','').replace(' ','').replace(')','').replace('（','').replace('）','')
     mp4_dir_name = os.path.join('file', album_name, 'mp4')
     if not os.path.exists(mp4_dir_name):
         os.makedirs(mp4_dir_name)
@@ -106,6 +106,7 @@ def main(html=None):
             continue
         cid,mid = re.search("/lesson/(\d+).html#mid=(\d+)",li.xpath("./a/@href")[0]).groups()
         name = li.xpath("./a/span/text()")[0].replace('.mp4','').strip().replace(' ','.') +'_'+ li.xpath("./a/text()")[1].strip()
+        name = name.replace('(','').replace(' ','').replace(')','').replace('（','').replace('）','')
         output_filename = os.path.join(mp4_dir_name, f"{name}.mp4")
         if not os.path.exists(output_filename):
             lesson_url = f"https://coding.imooc.com/lesson/m3u8h5?mid={mid}&cid={cid}&ssl=1&cdn=aliyun1"
