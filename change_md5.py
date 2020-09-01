@@ -25,6 +25,7 @@ def change(filename,content='0000000000000000'):
     f.close()
     print(f"change md5 {old_md5} to {get_md5(filename)}")
 
+
 def change_dir_files(dir):
     files = os.listdir(dir)
     for index,file in enumerate(files):
