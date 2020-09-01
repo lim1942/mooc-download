@@ -102,7 +102,7 @@ def main(html=None):
         os.makedirs(mp4_dir_name)
     for index, li in enumerate(lis):
         # 跳过不是视频的课程
-        if index in []:
+        if index in [56]:
             continue
         cid,mid = re.search("/lesson/(\d+).html#mid=(\d+)",li.xpath("./a/@href")[0]).groups()
         name = li.xpath("./a/span/text()")[0].replace('.mp4','').strip().replace(' ','.') +'_'+ li.xpath("./a/text()")[1].strip()
