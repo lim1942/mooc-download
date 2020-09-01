@@ -33,10 +33,9 @@ def change_dir_files(dir):
         print(f"{index+1} {filename}")
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
     # dirs = ['/Users/apple/Downloads/mooc_download-master/file/Python3入门机器学习 经典算法与应用 轻松入行人工智能_课程/mp4',
     #         '/Users/apple/Downloads/mooc_download-master/file/Python3数据分析与挖掘建模实战_课程/mp4',
     #         '/Users/apple/Downloads/mooc_download-master/file/Python3数据分析与挖掘建模实战_课程/pdf']
     # for dir in dirs:
     #     change_dir_files(dir)
-    print(get_md5('/Users/apple/Downloads/mooc_download-master/file/Python3数据分析与挖掘建模实战_课程/mp4/2-2.监测与抓取_(02:53).mp4'))
