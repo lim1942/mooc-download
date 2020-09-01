@@ -106,14 +106,14 @@ def main(html=None):
             continue
         cid,mid = re.search("/lesson/(\d+).html#mid=(\d+)",li.xpath("./a/@href")[0]).groups()
         name = li.xpath("./a/span/text()")[0].replace('.mp4','').strip().replace(' ','.') +'_'+ li.xpath("./a/text()")[1].strip()
-        ts_dir_name = os.path.join('file', album_name, 'ts', name)
-        if not os.path.exists(ts_dir_name):
-            os.makedirs(ts_dir_name)
         output_filename = os.path.join(mp4_dir_name, f"{name}.mp4")
         if not os.path.exists(output_filename):
             lesson_url = f"https://coding.imooc.com/lesson/m3u8h5?mid={mid}&cid={cid}&ssl=1&cdn=aliyun1"
             print(lesson_url)
             play_url = get_play_url(lesson_url)
+            ts_dir_name = os.path.join('file', album_name, 'ts', name)
+            if not os.path.exists(ts_dir_name):
+                os.makedirs(ts_dir_name)
             moc_m3u8_download(play_url,ts_dir_name,output_filename,f"episode:{index+1}/{len(lis)}")
         else:
             print(output_filename,'exists !!!')
